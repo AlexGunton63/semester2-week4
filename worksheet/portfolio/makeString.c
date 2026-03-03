@@ -14,8 +14,11 @@ int main( int argc, char **argv ) {
     // process the command-line data using appropriate string functions
     for(int i = 1; i < argc; i++)
     {
+        if(i != 1)
+        {
+            strcat(outputStr, "-");
+        }
         strcat(outputStr,argv[i]);
-        strcat(outputStr, "-");
     }
     printf("%s\n",outputStr); // use only this single print statement in your submitted code
 
